@@ -1,14 +1,21 @@
 var express = require('express');
 var router = express.Router();
+var Post = require('../models/Post')
 
-/* GET users listing. */
+// INDEX
 router.get('/posts', function(req, res, next) {
-  res.json([
-    {title: 'how to angular', body: 'what is this I dont even', author: 'pat'},
-    {title: 'how to node', body: 'what is this I do not even', author: 'pat'},
-    {title: 'smelliest cheese', body: 'blue I guess', author: 'pat'},
-    {title: 'cooking rice', body: 'just use a rice cooker, duh', author: 'pat'},
-  ]);
+  Post.find(function(err, posts) {
+    if (err) throw err;
+    res.json(posts)
+  })
 });
+
+// CREATE
+router.post('/posts', function(req, res, next) {
+  Post.create(req.body, function(err, post) {
+    if (err) throw err;
+    res.json(post)
+  })
+})
 
 module.exports = router;

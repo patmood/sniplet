@@ -11,7 +11,7 @@ angular.module('MainController', ['postService']).controller('MainController', f
       body: $scope.post.body,
       author: $scope.post.author
     }
-    $scope.posts.push(post)
+    postService.create(post)
   }
 
 });

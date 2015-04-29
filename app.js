@@ -14,7 +14,10 @@ var api = require('./app/routes/api');
 
 var app = express();
 
+// Database
 mongoose.connect(process.env.DB_URL)
+var db = mongoose.connection;
+db.on('error', console.error.bind(console, 'connection error:'));
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
