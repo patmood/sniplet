@@ -8,10 +8,6 @@ angular.module('appRoutes', []).config(['$routeProvider', '$locationProvider', f
       controller: 'MainController'
     })
 
-    .when('/posts', {
-      templateUrl: 'views/posts.html',
-      controller: 'PostController'
-    })
 
   $locationProvider.html5Mode(true);
 
