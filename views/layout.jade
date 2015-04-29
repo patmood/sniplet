@@ -1,7 +1,14 @@
 doctype html
 html
   head
+    meta(charset="UTF-8")
+    base(href="/")
     title= title
     link(rel='stylesheet', href='/stylesheets/style.css')
-  body
+  body(ng-app='sniplet')
     block content
+    script(src='/libs/angular/angular.js')
+    script(src='/libs/angular-route/angular-route.js')
+    script(src='/javascripts/app.js')
+    script(src='/javascripts/appRoutes.js')
+    script(src='/javascripts/controllers/MainController.js')
