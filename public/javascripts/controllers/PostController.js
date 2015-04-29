@@ -1,5 +1,8 @@
-angular.module('PostController', []).controller('PostController', function($scope) {
+angular.module('PostController', ['PostService']).controller('PostController', function($scope, PostService) {
 
-  $scope.tagline = 'List of posts';
+  PostService.get()
+    .success(function(data) {
+      $scope.posts = data
+    })
 
 });

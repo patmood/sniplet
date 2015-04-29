@@ -1,4 +1,4 @@
-angular.module('PostService', []).factory('Post', ['$http', function($http) {
+angular.module('PostService', []).factory('PostService', ['$http', function($http) {
   return {
     get: function() {
       return $http.get('/api/posts');
