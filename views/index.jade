@@ -3,5 +3,8 @@ extends layout
 block content
   h1= title
   p Welcome to #{title}
+  a(href='/') Main
+  |  |
+  a(href='/posts') Posts
   div(ng-controller='MainController')
     div(ng-view)
