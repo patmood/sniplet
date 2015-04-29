@@ -3,7 +3,6 @@ angular.module('MainController', ['postService']).controller('MainController', f
   postService.get(function(data) {
     $scope.posts = data
   })
-  $scope.tagline = 'To the moon and back!';
 
   $scope.createPost = function() {
     var post = {
@@ -12,6 +11,14 @@ angular.module('MainController', ['postService']).controller('MainController', f
       author: $scope.post.author
     }
     postService.create(post)
+    $scope.posts.push(post)
+  }
+
+  $scope.destroyPost = function(index) {
+    var post = $scope.posts[index]
+    postService.delete(post._id)
+
+    $scope.posts.splice(index, 1)
   }
 
 });
