@@ -3,6 +3,13 @@
 
 <ul>
   <li ng-repeat="post in posts">
-    {{ post.title }}
+    {{ post.title }} (by {{ post.author }})
   </li>
 </ul>
+
+<form ng-submit="createPost()">
+  <input ng-model="post.title"><br />
+  <textarea ng-model="post.body" rows="15" cols="30"></textarea><br />
+  <input ng-model="post.author"><br />
+  <input type="submit" value="Create Snip">
+</form>
