@@ -1,6 +1,6 @@
-angular.module('MainController', ['post']).controller('MainController', function($scope, post) {
+angular.module('MainController', ['postService']).controller('MainController', function($scope, postService) {
 
-  post.get(function(data) {
+  postService.get(function(data) {
     $scope.posts = data
   })
   $scope.tagline = 'To the moon and back!';
