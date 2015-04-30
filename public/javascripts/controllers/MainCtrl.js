@@ -1,4 +1,4 @@
-angular.module('MainController', ['postService']).controller('MainController', function($scope, postService) {
+angular.module('MainCtrl', ['postService']).controller('MainCtrl', function($scope, postService) {
 
   // Setup
   postService.get(function(data) {

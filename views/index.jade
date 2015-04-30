@@ -3,5 +3,9 @@ extends layout
 block content
   h1= title
   p Could bootstrap server data here: #{title}
+  a(href='/') Home<br>
+  a(href='/posts') Posts
 
-  div(ng-controller='MainController' ng-view)
+  div(ng-controller='MainCtrl')
+  div(ng-controller='PostsCtrl')
+  div(ng-view)
