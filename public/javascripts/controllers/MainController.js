@@ -1,15 +1,12 @@
 angular.module('MainController', ['postService']).controller('MainController', function($scope, postService) {
 
+  // Setup
   postService.get(function(data) {
     $scope.posts = data
   })
 
-  $scope.createPost = function() {
-    var post = {
-      title: $scope.post.title,
-      body: $scope.post.body,
-      author: $scope.post.author
-    }
+  // Define
+  $scope.createPost = function(post) {
     postService.create(post)
     $scope.posts.push(post)
   }
