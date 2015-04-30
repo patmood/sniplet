@@ -1,4 +1,4 @@
-angular.module('sniplet', [
+var app = angular.module('sniplet', [
   'ngRoute',
   'appRoutes',
   'MainController'
