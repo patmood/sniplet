@@ -2,7 +2,6 @@ extends layout
 
 block content
   h1= title
-  p Welcome to #{title}
+  p Could bootstrap server data here: #{title}
 
-  div(ng-controller='MainController')
-    div(ng-view)
+  div(ng-controller='MainController' ng-view)

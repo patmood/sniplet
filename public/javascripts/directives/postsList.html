@@ -1,6 +1,5 @@
 <ul>
   <li ng-repeat="post in posts">
-    <!-- WARNING: destroyPost is inherited from the controller scope. Not self contained! -->
-    {{ post.title }} (by {{ post.author }}) <button ng-click="destroyPost($index)">X</button>
+    {{ post.title }} (by {{ post.author }}) <button ng-click="destroy({index:$index})">X</button>
   </li>
 </ul>
