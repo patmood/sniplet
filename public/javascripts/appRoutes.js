@@ -8,6 +8,11 @@ angular.module('appRoutes', []).config(['$routeProvider', '$locationProvider', f
       controller: 'MainCtrl'
     })
 
+    .when('/posts/:id', {
+      templateUrl: 'views/post.html',
+      controller: 'PostCtrl'
+    })
+
     .when('/posts', {
       templateUrl: 'views/posts.html',
       controller: 'PostsCtrl'
