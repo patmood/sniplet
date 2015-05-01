@@ -6,7 +6,7 @@ angular.module('MainCtrl', ['postService']).controller('MainCtrl', function($sco
 
     var _id = $routeParams._id
     if (_id) {
-      $scope.singlePost = data[0]
+      $scope.singlePost = _.find(data, { _id: _id })
     }
   })
 
