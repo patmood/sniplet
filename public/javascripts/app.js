@@ -1,5 +1,4 @@
 var app = angular.module('sniplet', [
-  'ngRoute',
-  'appRoutes',
+  'ui.router',
   'MainCtrl'
 ]);

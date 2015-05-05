@@ -1,15 +1,16 @@
 doctype html
-html
+html(ng-app='sniplet')
   head
     meta(charset="UTF-8")
     base(href="/")
     title= title
     link(rel='stylesheet', href='/stylesheets/style.css')
-  body(ng-app='sniplet')
+  body(ng-controller='MainCtrl')
     block content
+
     script(src='/libs/lodash/lodash.js')
     script(src='/libs/angular/angular.js')
-    script(src='/libs/angular-route/angular-route.js')
+    script(src='/libs/angular-ui-router/release/angular-ui-router.js')
     script(src='/javascripts/app.js')
     script(src='/javascripts/appRoutes.js')
 

@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "dependencies": {
     "angular": "latest",
-    "angular-route": "latest",
-    "lodash": "*"
+    "lodash": "*",
+    "angular-ui-router": "~0.2.14"
   }
 }
