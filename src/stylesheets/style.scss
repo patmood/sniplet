@@ -1,3 +1,27 @@
+// Variables
+$default-color: #95a5a6;
+$primary-color: #3498db;
+$primary-color-hover: #7f8c8d;
+$success-color: #2ecc71;
+$success-color-hover: #27ae60;
+$warning-color: #F9BF3B;
+$warning-color-hover: #F39C12;
+$danger-color: #e74c3c;
+$danger-color-hover: #c0392b;
+
+$border-radius: 3px;
+
+// Utilities
+.primary { background-color: $primary-color }
+.primary:hover { background-color: $primary-color-hover }
+.success { background-color: $success-color }
+.success:hover { background-color: $success-color-hover }
+.warning { background-color: $warning-color }
+.warning:hover { background-color: $warning-color-hover }
+.danger { background-color: $danger-color }
+.danger:hover { background-color: $danger-color-hover }
+
+// Global
 html {
   box-sizing: border-box;
 }
@@ -7,12 +31,76 @@ html {
 }
 
 body {
-  padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: #80A6F2;
 }
 
+// Typography
+
+h1, h2, h3 {
+  line-height: 1.1em;
+  letter-spacing: normal;
+  color: #222;
+}
+h1 {
+  font-weight: 900;
+}
+h2 {
+  letter-spacing: -0.02em;
+  font-weight: 700;
+}
+h3 {
+  letter-spacing: -0.02em;
+  font-weight: 500;
+}
+p {
+  line-height: 1.5em;
+  margin-bottom: 0px;
+  font-size: 16px;
+  color: #444;
+}
 a {
-  color: #00B7FF;
+  color: #428bca;
+  text-decoration: none;
+}
+a:hover, a:focus {
+  color: #005580;
+  text-decoration: underline;
+}
+
+// Components
+
+.content {
+  max-width: 800px;
+  width: 100%;
+  background-color: #fff;
+  padding: 20px;
+  margin: auto;
+}
+
+.btn {
+  padding: 5px;
+  color: #fff;
+  border: none;
+}
+
+.form-control {
+  font-size: 14px;
+  margin: 5px;
+  padding: 5px;
+  border: solid 1px $default-color;
+  border-radius: $border-radius;
+  width: 100%;
+}
+
+
+// Directives
+create-post {
+  form {
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
+  }
 }
 
 post {
@@ -20,4 +108,6 @@ post {
   border: 1px solid black;
   padding: 20px;
   margin: 20px;
+  border: solid 1px $default-color;
+  border-radius: $border-radius;
 }
